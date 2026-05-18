@@ -1,0 +1,66 @@
+/* ──────────────────────────────────────────────
+   Typography Utilities — Project Loci
+   ────────────────────────────────────────────── */
+
+/* ── Utility classes ── */
+
+.serif {
+  font-family: var(--serif);
+}
+
+.italic {
+  font-style: italic;
+}
+
+.display {
+  font-family: var(--serif);
+  font-style: italic;
+}
+
+.eyebrow {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-weight: 500;
+}
+
+.lede {
+  font-family: var(--serif);
+  font-size: 24px;
+  line-height: 1.5;
+}
+
+/* ── Paragraph defaults ── */
+
+p {
+  color: var(--cream-2);
+  line-height: 1.7;
+}
+
+p + p {
+  margin-top: 1em;
+}
+
+/* ── Links ── */
+
+a {
+  color: var(--cyan);
+  text-decoration: none;
+  transition: opacity 0.15s ease;
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+/* ── Drop cap ── */
+
+.dropcap::first-letter {
+  font-family: var(--serif);
+  font-size: 3.4em;
+  float: left;
+  line-height: 0.8;
+  margin-right: 0.08em;
+  margin-top: 0.05em;
+  color: var(--cream);
+}

@@ -1,0 +1,70 @@
+/* ──────────────────────────────────────────────
+   Design Tokens — Project Loci
+   Dark theme (default) · Light theme override
+   ────────────────────────────────────────────── */
+
+:root {
+  /* ── Surface / Background ── */
+  --ink:             #0a0d18;
+  --ink-2:           #121622;
+  --ink-3:           #181c2d;
+  --ink-4:           #1f243a;
+
+  /* ── Borders ── */
+  --hairline:        #252b42;
+  --hairline-strong: #2f3656;
+
+  /* ── Text ── */
+  --cream:           #efe7d4;
+  --cream-2:         #d4cebe;
+  --cream-3:         #a8a298;
+  --muted:           #7889a8;
+  --faint:           #3a4260;
+
+  /* ── Accent ── */
+  --cyan:            #4d7cfe;
+  --cyan-2:          #1e3578;
+  --purple:          #7ba1ff;
+  --purple-2:        #2438a8;
+  --green:           #ffa478;
+  --green-2:         #7a3a18;
+  --amber:           #ff7849;
+  --red:             #e85a2a;
+
+  /* ── Typography ── */
+  --serif:   'EB Garamond', 'Apple Garamond', Garamond, serif;
+  --sans:    'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --heading: 'Space Grotesk', system-ui, sans-serif;
+
+  /* ── Layout columns ── */
+  --col-narrow: 640px;
+  --col-mid:    820px;
+  --col-wide:   1080px;
+  --col-full:   1280px;
+}
+
+/* ── Light theme ── */
+[data-theme="light"] {
+  --ink:             #faf7ef;
+  --ink-2:           #f3eee2;
+  --ink-3:           #ece7d8;
+  --ink-4:           #ddd6c2;
+
+  --hairline:        #d4ccb8;
+  --hairline-strong: #b8ae96;
+
+  --cream:           #1a1f2e;
+  --cream-2:         #38415a;
+  --cream-3:         #5a637a;
+  --muted:           #7a8398;
+  --faint:           #b8b0a0;
+
+  --cyan:            #2563eb;
+  --cyan-2:          #93b5ff;
+  --purple:          #4d7cfe;
+  --purple-2:        #aac0ff;
+  --green:           #f97316;
+  --green-2:         #fbb18a;
+  --amber:           #ea580c;
+  --red:             #c2410c;
+}
