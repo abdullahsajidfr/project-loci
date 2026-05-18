@@ -70,11 +70,23 @@ export default function Research() {
           {REFERENCES.map((ref, i) => (
             <div
               key={i}
+              className="research-card"
               style={{
                 padding: 24,
                 background: 'var(--ink-2)',
                 border: '1px solid var(--hairline)',
                 borderRadius: 8,
+                transition: 'transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease',
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.transform = 'translateY(-3px)';
+                e.currentTarget.style.borderColor = 'var(--hairline-strong)';
+                e.currentTarget.style.boxShadow = '0 6px 20px rgba(0,0,0,0.15)';
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.transform = 'translateY(0)';
+                e.currentTarget.style.borderColor = 'var(--hairline)';
+                e.currentTarget.style.boxShadow = 'none';
               }}
             >
               <span

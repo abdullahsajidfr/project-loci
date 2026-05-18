@@ -11,6 +11,7 @@ import Research from './Research';
 import Feasibility from './Feasibility';
 import Reflections from './Reflections';
 import Footer from './Footer';
+import Reveal from '../shared/Reveal';
 
 const hrStyle = {
   height: 1,
@@ -31,23 +32,23 @@ export default function WebsiteLayout() {
       <Navbar />
       <Hero />
       <hr style={hrStyle} />
-      <Introduction />
+      <Reveal><Introduction /></Reveal>
       <hr style={hrStyle} />
-      <Problem />
+      <Reveal><Problem /></Reveal>
       <hr style={hrStyle} />
-      <Method />
+      <Reveal><Method /></Reveal>
       <hr style={hrStyle} />
-      <AppDemo />
+      <Reveal><AppDemo /></Reveal>
       <hr style={hrStyle} />
-      <Workflow />
+      <Reveal><Workflow /></Reveal>
       <hr style={hrStyle} />
-      <Session />
+      <Reveal><Session /></Reveal>
       <hr style={hrStyle} />
-      <Research />
+      <Reveal><Research /></Reveal>
       <hr style={hrStyle} />
-      <Feasibility />
+      <Reveal><Feasibility /></Reveal>
       <hr style={hrStyle} />
-      <Reflections />
+      <Reveal><Reflections /></Reveal>
       <hr style={hrStyle} />
       <Footer />
     </div>

@@ -32,7 +32,7 @@ export default function Navbar() {
         alignItems: 'center',
         justifyContent: 'space-between',
         padding: '0 32px',
-        background: 'rgba(10,8,20,0.78)',
+        background: 'var(--nav-bg)',
         backdropFilter: 'blur(20px)',
         WebkitBackdropFilter: 'blur(20px)',
         borderBottom: '1px solid var(--hairline)',

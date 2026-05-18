@@ -31,6 +31,9 @@
   --amber:           #ff7849;
   --red:             #e85a2a;
 
+  /* ── Surface overlays ── */
+  --nav-bg:          rgba(10,8,20,0.78);
+
   /* ── Typography ── */
   --serif:   'EB Garamond', 'Apple Garamond', Garamond, serif;
   --sans:    'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -58,6 +61,8 @@
   --cream-3:         #5a637a;
   --muted:           #7a8398;
   --faint:           #b8b0a0;
+
+  --nav-bg:          rgba(250,247,239,0.82);
 
   --cyan:            #2563eb;
   --cyan-2:          #93b5ff;

@@ -536,7 +536,7 @@ export default function Exploration() {
       style={{
         minHeight: '100vh',
         padding: '52px 0 0 0',
-        background: '#0a0d18',
+        background: 'var(--ink)',
         display: 'flex',
         flexDirection: 'column',
       }}
@@ -548,7 +548,7 @@ export default function Exploration() {
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'space-between',
-          borderBottom: '1px solid #252b42',
+          borderBottom: '1px solid var(--hairline)',
           flexWrap: 'wrap',
           gap: 8,
         }}
@@ -559,7 +559,7 @@ export default function Exploration() {
               fontFamily: 'var(--sans)',
               fontSize: 11,
               fontWeight: 600,
-              color: '#ffa478',
+              color: 'var(--green)',
               textTransform: 'uppercase',
               letterSpacing: 1.5,
               background: 'rgba(255,164,120,0.1)',
@@ -574,7 +574,7 @@ export default function Exploration() {
               fontFamily: 'var(--heading)',
               fontSize: 14,
               fontWeight: 600,
-              color: '#e8edf5',
+              color: 'var(--cream)',
             }}
           >
             {roomLabel}
@@ -588,7 +588,7 @@ export default function Exploration() {
               style={{
                 fontFamily: 'var(--sans)',
                 fontSize: 12,
-                color: '#7889a8',
+                color: 'var(--muted)',
               }}
             >
               {visitedCount}/{CONCEPTS.length}
@@ -598,7 +598,7 @@ export default function Exploration() {
                 width: 80,
                 height: 4,
                 borderRadius: 2,
-                background: '#1f243a',
+                background: 'var(--ink-4)',
                 overflow: 'hidden',
               }}
             >
@@ -606,7 +606,7 @@ export default function Exploration() {
                 style={{
                   height: '100%',
                   width: `${progressPct}%`,
-                  background: '#4d7cfe',
+                  background: 'var(--cyan)',
                   borderRadius: 2,
                   transition: 'width 0.3s',
                 }}
@@ -621,9 +621,9 @@ export default function Exploration() {
               fontFamily: 'var(--sans)',
               fontSize: 12,
               fontWeight: 500,
-              color: showPath ? '#4d7cfe' : '#7889a8',
-              background: showPath ? 'rgba(77,124,254,0.1)' : '#181c2d',
-              border: '1px solid ' + (showPath ? 'rgba(77,124,254,0.3)' : '#252b42'),
+              color: showPath ? 'var(--cyan)' : 'var(--muted)',
+              background: showPath ? 'rgba(77,124,254,0.1)' : 'var(--ink-3)',
+              border: '1px solid ' + (showPath ? 'rgba(77,124,254,0.3)' : 'var(--hairline)'),
               borderRadius: 8,
               padding: '5px 12px',
               cursor: 'pointer',
@@ -640,9 +640,9 @@ export default function Exploration() {
               fontFamily: 'var(--sans)',
               fontSize: 12,
               fontWeight: 500,
-              color: showPanel ? '#4d7cfe' : '#7889a8',
-              background: showPanel ? 'rgba(77,124,254,0.1)' : '#181c2d',
-              border: '1px solid ' + (showPanel ? 'rgba(77,124,254,0.3)' : '#252b42'),
+              color: showPanel ? 'var(--cyan)' : 'var(--muted)',
+              background: showPanel ? 'rgba(77,124,254,0.1)' : 'var(--ink-3)',
+              border: '1px solid ' + (showPanel ? 'rgba(77,124,254,0.3)' : 'var(--hairline)'),
               borderRadius: 8,
               padding: '5px 12px',
               cursor: 'pointer',
@@ -695,16 +695,17 @@ export default function Exploration() {
             />
           )}
 
-          {/* Info popup at bottom */}
+          {/* Info popup overlay */}
           {selectedConcept && (
             <div
               style={{
                 marginTop: 12,
                 padding: '16px 20px',
-                background: '#121622',
+                background: 'var(--ink-2)',
                 border: `1px solid ${selectedConcept.color}33`,
                 borderRadius: 12,
                 maxWidth: 600,
+                animation: 'popIn 0.25s ease forwards',
               }}
             >
               <div
@@ -728,7 +729,7 @@ export default function Exploration() {
                     fontFamily: 'var(--heading)',
                     fontSize: 16,
                     fontWeight: 600,
-                    color: '#e8edf5',
+                    color: 'var(--cream)',
                   }}
                 >
                   {selectedConcept.label}
@@ -738,8 +739,8 @@ export default function Exploration() {
                     style={{
                       fontFamily: 'var(--sans)',
                       fontSize: 11,
-                      color: '#7889a8',
-                      background: '#1f243a',
+                      color: 'var(--muted)',
+                      background: 'var(--ink-4)',
                       padding: '2px 8px',
                       borderRadius: 8,
                     }}
@@ -752,7 +753,7 @@ export default function Exploration() {
                 style={{
                   fontFamily: 'var(--sans)',
                   fontSize: 13,
-                  color: '#7889a8',
+                  color: 'var(--muted)',
                   lineHeight: 1.6,
                   margin: '0 0 6px',
                 }}
@@ -763,7 +764,7 @@ export default function Exploration() {
                 style={{
                   fontFamily: 'var(--sans)',
                   fontSize: 12,
-                  color: '#3a4260',
+                  color: 'var(--faint)',
                   fontStyle: 'italic',
                   margin: '0 0 12px',
                 }}
@@ -775,7 +776,7 @@ export default function Exploration() {
                   fontFamily: 'var(--sans)',
                   fontSize: 12,
                   fontWeight: 600,
-                  color: '#4d7cfe',
+                  color: 'var(--cyan)',
                   background: 'rgba(77,124,254,0.1)',
                   border: '1px solid rgba(77,124,254,0.25)',
                   borderRadius: 8,
@@ -795,10 +796,10 @@ export default function Exploration() {
           <div
             style={{
               width: 238,
-              borderLeft: '1px solid #252b42',
+              borderLeft: '1px solid var(--hairline)',
               padding: '16px 14px',
               overflowY: 'auto',
-              background: '#0d1018',
+              background: 'var(--ink-2)',
               flexShrink: 0,
             }}
           >
@@ -807,7 +808,7 @@ export default function Exploration() {
                 fontFamily: 'var(--heading)',
                 fontSize: 14,
                 fontWeight: 600,
-                color: '#e8edf5',
+                color: 'var(--cream)',
                 margin: '0 0 4px',
               }}
             >
@@ -817,7 +818,7 @@ export default function Exploration() {
               style={{
                 fontFamily: 'var(--sans)',
                 fontSize: 11,
-                color: '#3a4260',
+                color: 'var(--faint)',
                 margin: '0 0 14px',
               }}
             >
@@ -858,7 +859,7 @@ export default function Exploration() {
                         width: 8,
                         height: 8,
                         borderRadius: '50%',
-                        background: isVisited ? c.color : '#3a4260',
+                        background: isVisited ? c.color : 'var(--faint)',
                         flexShrink: 0,
                       }}
                     />
@@ -868,7 +869,7 @@ export default function Exploration() {
                           fontFamily: 'var(--sans)',
                           fontSize: 12,
                           fontWeight: 500,
-                          color: isVisited ? '#e8edf5' : '#7889a8',
+                          color: isVisited ? 'var(--cream)' : 'var(--muted)',
                           margin: 0,
                           overflow: 'hidden',
                           textOverflow: 'ellipsis',
@@ -882,7 +883,7 @@ export default function Exploration() {
                           style={{
                             fontFamily: 'var(--sans)',
                             fontSize: 10,
-                            color: '#3a4260',
+                            color: 'var(--faint)',
                             margin: 0,
                           }}
                         >
@@ -894,7 +895,7 @@ export default function Exploration() {
                       <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
                         <path
                           d="M3 7.5l2.5 2.5L11 5"
-                          stroke="#4d7cfe"
+                          stroke="var(--cyan)"
                           strokeWidth="1.5"
                           strokeLinecap="round"
                           strokeLinejoin="round"

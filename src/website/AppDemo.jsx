@@ -315,19 +315,23 @@ export default function AppDemo() {
                 })}
               </svg>
 
-              {/* Selected concept popup at bottom of SVG */}
+              {/* Selected concept popup overlay centered on SVG */}
               {selectedConcept && (
                 <div
                   style={{
                     position: 'absolute',
-                    bottom: 20,
-                    left: 16,
-                    right: 16,
-                    padding: '14px 18px',
-                    background: 'rgba(10,13,24,0.92)',
+                    top: '50%',
+                    left: '50%',
+                    transform: 'translate(-50%, -50%)',
+                    width: 'min(380px, calc(100% - 32px))',
+                    padding: '16px 20px',
+                    background: 'rgba(10,13,24,0.95)',
                     border: `1px solid ${selectedConcept.color}`,
-                    borderRadius: 8,
-                    backdropFilter: 'blur(12px)',
+                    borderRadius: 10,
+                    backdropFilter: 'blur(16px)',
+                    zIndex: 10,
+                    boxShadow: `0 8px 32px rgba(0,0,0,0.4), 0 0 0 1px ${selectedConcept.color}22`,
+                    animation: 'popIn 0.25s ease forwards',
                   }}
                 >
                   <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginBottom: 6 }}>
@@ -360,6 +364,23 @@ export default function AppDemo() {
                     >
                       {selectedConcept.zone}
                     </span>
+                    <button
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        setSelected(null);
+                      }}
+                      style={{
+                        background: 'none',
+                        border: 'none',
+                        color: 'var(--cream-3)',
+                        cursor: 'pointer',
+                        fontSize: 16,
+                        lineHeight: 1,
+                        padding: '0 0 0 4px',
+                      }}
+                    >
+                      &times;
+                    </button>
                   </div>
                   <p
                     style={{

@@ -50,6 +50,9 @@ export default function Hero() {
             letterSpacing: '0.06em',
             color: 'var(--cream-3)',
             marginBottom: 40,
+            opacity: 0,
+            animation: 'heroFadeUp 0.8s ease forwards',
+            animationDelay: '0.1s',
           }}
         >
           Spatial Memory · Evidence-Based · For South Asian Students
@@ -64,6 +67,9 @@ export default function Hero() {
             fontWeight: 400,
             margin: 0,
             letterSpacing: '-0.02em',
+            opacity: 0,
+            animation: 'heroFadeUp 0.9s ease forwards',
+            animationDelay: '0.25s',
           }}
         >
           <span style={{ fontStyle: 'italic', color: 'var(--cream)', display: 'block' }}>
@@ -94,6 +100,9 @@ export default function Hero() {
             maxWidth: '38ch',
             marginTop: 36,
             marginBottom: 40,
+            opacity: 0,
+            animation: 'heroFadeUp 0.9s ease forwards',
+            animationDelay: '0.45s',
           }}
         >
           Project Loci helps MDCAT and CSS aspirants encode thousands of facts
@@ -103,7 +112,7 @@ export default function Hero() {
         </p>
 
         {/* Buttons */}
-        <div style={{ display: 'flex', gap: 16, flexWrap: 'wrap' }}>
+        <div style={{ display: 'flex', gap: 16, flexWrap: 'wrap', opacity: 0, animation: 'heroFadeUp 0.9s ease forwards', animationDelay: '0.6s' }}>
           <Link
             to="/app"
             style={{
@@ -159,6 +168,9 @@ export default function Hero() {
             marginTop: 72,
             paddingTop: 32,
             borderTop: '1px solid var(--hairline)',
+            opacity: 0,
+            animation: 'heroFadeUp 0.9s ease forwards',
+            animationDelay: '0.8s',
           }}
         >
           {[
